@@ -1,1 +1,22 @@
-nghjghj
+<import src="./Featured/Featured.wxml" />
+<import src="./fruit/fruit.wxml" />
+<import src="./seafood/seafood.wxml" />
+<import src="./Meatbird/Meatbird.wxml" />
+<import src="./Vegetarian/Vegetarian.wxml" />
+<import src="./Milkdrink/Milkdrink.wxml" />
+<import src="./vegetables/vegetables.wxml" />
+<scroll-view class='menus' scroll-x="true">
+  <view class='menu_warapper'>
+    <block wx:for="{{menus}}" wx:key="{{index}}">
+      <view class='menu_item' bindtap='currentItem' data-index="{{index}}">{{item}}</view>
+    </block>
+  </view>
+  <view class='slider_bar' style='transform:translateX({{slideLeft}}rpx)'></view>
+</scroll-view>
+<swiper class='template_view' current='{{templateIndex}}' duration='300'>
+  <block wx:for="{{templates}}" wx:key="{{index}}" >
+    <swiper-item>
+      <template is="{{item}}" data="{{input:gg}}" ></template>
+    </swiper-item>
+  </block>
+</swiper>

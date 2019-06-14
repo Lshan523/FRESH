@@ -1,0 +1,3 @@
+<template name="Featured">
+    <view>Featured页面</view>
+</template>

@@ -1,0 +1,3 @@
+<template name="vegetables">
+    <view>vegetables页面</view>
+</template>

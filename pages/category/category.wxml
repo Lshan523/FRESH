@@ -1,2 +1,17 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class='category'>
+  <scroll-view class='menus' scroll-y="true" scroll-with-animation="true">
+    <block wx:for="{{menus}}" wx:key="{{index}}">
+      <view class='menu_item {{index===curLeftNavIndex?"cur":""}}' bindtap='NavItem' data-index="{{index}}">
+        {{item}}
+      </view>
+    </block>
+  </scroll-view>
+  <swiper vertical='true' duration='300' current='{{curLeftNavIndex}}' class="category-cont-wrap">
+  <block wx:for="{{menus}}" wx:key="{{index}}">
+    <swiper-item>
+      <view>张国锋经常麦片</view>
+    </swiper-item>
+  </block>
+</swiper>
+</view>

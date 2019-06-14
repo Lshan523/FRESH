@@ -1,0 +1,3 @@
+<template name="Vegetarian">
+    <view>Vegetarian页面</view>
+</template>

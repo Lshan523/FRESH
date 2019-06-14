@@ -1,0 +1,3 @@
+<template name="Milkdrink">
+    <view>Milkdrink页面</view>
+</template>

@@ -1,0 +1,3 @@
+<template name="seafood">
+    <view>seafood页面</view>
+</template>

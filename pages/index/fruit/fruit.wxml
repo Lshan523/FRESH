@@ -1,0 +1,3 @@
+<template name="fruit">
+    <view>fruilt页面</view>
+</template>
