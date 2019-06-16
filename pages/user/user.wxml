@@ -1,2 +1,4 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="avatar-bg">
+<image class='avatar-img' src="//m.360buyimg.com/babel/jfs/t19426/11/1131416188/256267/8da2b3e7/5abdde48N40348736.png"></image>
+<view class='user-name'>{{name}}</view>
+</view>

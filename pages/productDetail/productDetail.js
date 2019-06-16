@@ -1,31 +1,43 @@
-// pages/category/category.js
+// pages/productDetail/productDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    menus: ["推荐分类", "新鲜水果", "海鲜水产", "蔬菜蛋品", "精选肉类", "乳品冷饮", "面点烘培", "方便速食", "火锅丸料", "安心品质", "送礼佳品", "特色生鲜"],
-    curLeftNavIndex: 0,
-    dd:[1,2,3,4,5,6],
-    name:"烧烤原料"
+    keywords: "",
+    showItem1: false,
+    showItem3: false,
+    maskShow:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-  NavItem(e) {
-    let index = e.currentTarget.dataset.index;
     this.setData({
-      curLeftNavIndex:index
+      keywords: options.name
     })
   },
-  switchDetail(e){
-    wx.navigateTo({
-      url: `../productDetail/productDetail?name=${e.currentTarget.dataset.name}`
+  showTab1() {
+    this.setData({
+      showItem1: !this.data.showItem1,
+      showItem3: false,
+      maskShow:!this.data.showItem1
+    })
+  },
+  showTab3() {
+    this.setData({
+      showItem1: false,
+      showItem3: !this.data.showItem3,
+      maskShow:!this.data.showItem3
+    })
+  },
+  hideMask(){
+    this.setData({
+      showItem1:false,
+      showItem3:false,
+      maskShow:false
     })
   },
   /**

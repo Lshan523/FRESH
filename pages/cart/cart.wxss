@@ -1,1 +1,14 @@
-/* pages/cart/cart.wxss */
+.cart-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0;
+}
+.cart-img{
+  width:248rpx;
+  height:248rpx;
+}
+.cart-notice{
+  font-size: 14px;
+}

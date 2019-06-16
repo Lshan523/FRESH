@@ -3,14 +3,15 @@
     "pages/index/index",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/productDetail/productDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#6cb82c",
     "navigationBarTitleText": "生鲜邮购",
     "navigationBarTextStyle": "white",
-    "backgrounColor":"#f9f9f9"
+    "backgroundColor": "#f9f9f9"
   },
   "tabBar": {
     "color": "#8a8a8a",

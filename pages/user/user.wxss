@@ -1,1 +1,43 @@
-/* pages/user/user.wxss */
+.avatar-bg {
+  height: 400rpx;
+  background: #6cb82c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.avatar-bg::before, .avatar-bg::after {
+  content: "";
+  width: 180rpx;
+  height: 180rpx;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.avatar-bg::after {
+  width: 230rpx;
+  height: 230rpx;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.avatar-img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-name {
+  color: #fff;
+  position: absolute;
+  bottom: 15px;
+}

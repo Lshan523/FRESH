@@ -8,10 +8,20 @@
     </block>
   </scroll-view>
   <swiper vertical='true' duration='300' current='{{curLeftNavIndex}}' class="category-cont-wrap">
-  <block wx:for="{{menus}}" wx:key="{{index}}">
-    <swiper-item>
-      <view>张国锋经常麦片</view>
-    </swiper-item>
-  </block>
-</swiper>
+    <block wx:for="{{menus}}" wx:key="{{index}}">
+      <swiper-item>
+        <view class='category-cont-cBox'>
+          <view class='category-title'>{{menus[index]}}</view>
+          <view class='category-list'>
+          <block wx:for="{{dd}}" wx:key="{{index}}">
+            <view class='onCategoryContItemTap' bindtap='switchDetail' data-name="{{name}}">
+              <image class="list-image" src='//m.360buyimg.com/babel/jfs/t5728/329/5921521091/84870/692ce0e4/59672f05N41d69f13.jpg!q50.jpg'></image>
+            <text class='list_info'>{{name}}</text>
+            </view>
+            </block>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>

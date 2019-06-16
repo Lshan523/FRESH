@@ -1,0 +1,39 @@
+<view class='product-container'>
+  <view class="search-box">
+    <icon type='search' size='15' class='icon_search' />
+    <input value='{{keywords}}' class='input_search' />
+    <icon type='clear' size='15' class='icon_clear' />
+  </view>
+  <view class='select-wrapper'>
+    <view class='select-box'>
+      <view class='select_item triangle_icon' catchtap='showTab1'>综合</view>
+      <view class='select_item'>销量</view>
+      <view class='select_item triangle_icon' catchtap='showTab3'>服务</view>
+      <view class='select_item'>筛选</view>
+    </view>
+    <block wx:if="{{showItem1}}">
+      <view class='select-tab1'>
+        <view class='foid_item'>综合</view>
+        <view class='foid_item'>最新上架</view>
+        <view class='foid_item'>价格最低</view>
+        <view class='foid_item'>价格最高</view>
+        <view class='foid_item'>评论最多</view>
+      </view>
+    </block>
+    <block wx:if="{{showItem3}}">
+      <view class='select-tab3'>
+        <view class='foid_item'>有货优先</view>
+        <view class='foid_item'>优质物流</view>
+        <view class='foid_item'>货到付款</view>
+        <view class='foid_item'>促销商品</view>
+        <view class='foid_item'>PLUS专享价</view>
+        <view class='btns c'>
+          <view class='btn btn-calcel'>重置</view>
+          <view class='btn btn-ok'>确认</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class='mask-bg' wx:if="{{maskShow}}" catchtap='hideMask'></view>
